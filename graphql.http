@@ -1,0 +1,13 @@
+
+
+POST http://localhost:5000/graphql
+Content-Type: application/json
+X-REQUEST-TYPE: GraphQL
+
+query {
+  people(offset: 2, limit:3) {
+    id
+    name
+    surname
+  }
+}
