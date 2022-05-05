@@ -21,6 +21,13 @@ var app = builder.Build();
 app.UseHttpsRedirection();
 app.UseGraphQLGraphiQL();
 app.UseGraphQL<ISchema>();
+
+Console.WriteLine("********************************************************************");
+Console.WriteLine("Welcome to the graphql-spike");
+Console.WriteLine("Please, access the UI at http://localhost:5000/ui/graphiql");
+Console.WriteLine("********************************************************************");
+Console.WriteLine("");
+
 app.Run();
 
 public class PersonType : ObjectGraphType<Person>
